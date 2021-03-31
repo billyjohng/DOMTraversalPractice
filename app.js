@@ -1,107 +1,80 @@
-const grid = document.querySelector(".grid-container");
-const taskName = document.querySelector('#task');
-const submitButton = document.querySelector('.submit')
-const finishedTasks = document.querySelector('.finished-tasks-container');
-let finishedTasksParent = document.querySelector('.removed-tasks')
-const buttons = document.querySelectorAll("button")
+const menuBtn = document.querySelector('.menu')
+const siteLinks = document.querySelectorAll('li a');
+const navlinks = document.querySelector('.nav-links')
+const header = document.querySelector('.header-container')
 
-grid.addEventListener('click', (e) => {
 
-    if (e.target.className == 'submit') {
-        if (taskName.value == "") {
-            alert('Enter a valid task')
-        } else {
-            let task = document.createElement('li');
-            let ol = document.querySelector('ol');
-            task.textContent = taskName.value
-            ol.appendChild(task);
-            addButtonToTasks(task)
-            taskName.value = ""
-        }
-        
-    } else if (e.target.className == 'hide') {
-        if (finishedTasks.style.display == 'none') {
-            finishedTasks.style.display = 'block';
-            e.target.textContent = 'Hide finished tasks'
-        } else {
-            finishedTasks.style.display = 'none'
-            e.target.textContent = 'Show all finished tasks'
-        }
-    } 
+menuBtn.addEventListener('click', e => {
+    document.querySelector('.nav-links').classList.toggle('show')
 })
 
-grid.addEventListener('click', (e) => {
-    
-    if (e.target.className == 'up') {
-        let li = e.target.parentNode
-        let ol = li.parentNode
-        let prevLi = li.previousElementSibling
-
-        if (!prevLi) {
-            
-        } else {
-            ol.insertBefore(li, prevLi)
-        }
-    } else if (e.target.className == 'down') {
-        let li = e.target.parentNode
-        let ol = li.parentNode
-        let nextLi = li.nextElementSibling
-        
-        if (!nextLi) {
-
-        } else {
-            ol.insertBefore(nextLi, li)
-        }
-    }
-    
-})
-
-grid.addEventListener('click', (event) => {
-    
-    if (event.target.className == 'finish') {
-        let li = event.target.parentNode;
-        let ol = li.parentNode
-        clonedLi = ol.removeChild(li);
-        let newLi = document.createElement('li')
-        newLi = clonedLi;
-        finishedTasksParent.appendChild(newLi)
-        
-        for (let i = 0; i < 3; i++) {
-            newLi.removeChild(newLi.lastChild)
-        }
-
-        let removeButton = document.createElement('button')
-        removeButton.textContent = 'Clear from the list'
-        removeButton.classList = 'delete'
-        newLi.appendChild(removeButton)
-    }
-})
-
-
-
-
-const addButtonToTasks = (li) => {
-    let up = document.createElement('button')
-    up.textContent = 'Up'
-    up.className = 'up'
-    li.appendChild(up)
-
-    let down = document.createElement('button')
-    down.textContent = 'Down'
-    down.className = 'down'
-    li.appendChild(down)
-
-    let finish = document.createElement('button')
-    finish.textContent = 'Done'
-    finish.className = 'finish'
-    li.appendChild(finish)
+function activeLink() {
+    return Array.from(siteLinks).filter(x => {
+        return x.classList.contains('active')
+    })
 }
 
 
-finishedTasks.addEventListener('click', (event) => {
-    if (event.target.tagName == 'BUTTON') {
-        let li = event.target.parentNode
-        let ul = li.parentNode
-        ul.removeChild(li)
+Array.from(siteLinks).forEach(x => {
+    x.addEventListener('click', e => {
+        e.preventDefault();
+        if (e.target != activeLink()) {
+            activeLink().forEach(x => {
+                x.classList.remove('active')
+            })
+        }
+        x.classList.toggle('active')
+
+        const href = e.target.getAttribute('href')
+        const target = document.querySelector(href)
+        
+        
+        let position = target.offsetTop;
+
+        if (header.classList.contains('fixed'))  {
+            window.scrollTo({
+                top: position - header.getBoundingClientRect().height,
+                left: 0,
+                behavior: 'smooth'
+            })
+
+        } else {
+            window.scrollTo({
+                top: position - header.getBoundingClientRect().height * 2,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
+
+
+
+
+        document.querySelector('.nav-links').classList.toggle('show')
+    })
+})
+
+
+window.addEventListener('scroll', e => {
+    const headerheight = document.querySelector('.header-container').getBoundingClientRect().height;
+    if (window.pageYOffset > headerheight) {
+        document.querySelector('.header-container').classList.add('fixed')
+    } else {
+        document.querySelector('.header-container').classList.remove('fixed')
     }
+
+    if (window.pageYOffset > 600) {
+        document.querySelector('.to-top').classList.add('show-to-top')
+    } else {
+        document.querySelector('.to-top').classList.remove('show-to-top')
+    }
+
+
+})
+
+document.querySelector('.to-top').addEventListener('click', e => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
 })
