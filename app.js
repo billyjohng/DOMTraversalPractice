@@ -3,6 +3,10 @@ const siteLinks = document.querySelectorAll('li a');
 const navlinks = document.querySelector('.nav-links')
 const header = document.querySelector('.header-container')
 
+window.addEventListener('click', e => {
+    console.log(show);
+})
+
 
 menuBtn.addEventListener('click', e => {
     document.querySelector('.nav-links').classList.toggle('show')
@@ -31,16 +35,31 @@ Array.from(siteLinks).forEach(x => {
         
         let position = target.offsetTop;
 
-        if (header.classList.contains('fixed'))  {
+
+        if (header.classList.contains('fixed') && navlinks.classList.contains('show')) {
+            window.scrollTo({
+                top: position - 100,
+                left: 0,
+                behavior: 'smooth'
+            })
+        } else if (navlinks.classList.contains('show') && !header.classList.contains('fixed')) {
+            window.scrollTo({
+                top: position - 425,
+                left: 0,
+                behavior: 'smooth'
+            })
+
+        } else if (header.classList.contains('fixed')) {
             window.scrollTo({
                 top: position - header.getBoundingClientRect().height,
                 left: 0,
                 behavior: 'smooth'
             })
-
-        } else {
+        }
+        
+        else {
             window.scrollTo({
-                top: position - header.getBoundingClientRect().height * 2,
+                top: position - (header.getBoundingClientRect().height + 90),
                 left: 0,
                 behavior: 'smooth'
             })
