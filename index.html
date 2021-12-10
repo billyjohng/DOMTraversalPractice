@@ -1,568 +1,97 @@
-<script src="https://cdn01.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
-<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.29509" type="text/javascript"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
-<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.29509" type="text/javascript"></script>
-<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.29509" type="text/javascript"></script>
-<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.29509" type="text/javascript"></script>
-<script src="https://js.jotform.com/vendor/postMessage.js?3.3.29509" type="text/javascript"></script>
-<script src="https://js.jotform.com/WidgetsServer.js?v=1639048157340" type="text/javascript"></script>
-<script type="text/javascript">	JotForm.newDefaultTheme = true;
-	JotForm.extendsNewTheme = false;
-	JotForm.newPaymentUIForNewCreatedForms = false;
-	JotForm.newPaymentUI = true;
 
-	JotForm.init(function(){
-	/*INIT-START*/
-if (window.JotForm && JotForm.accessible) $('input_66').setAttribute('tabindex',0);
-      setTimeout(function() {
-          $('input_66').hint('Vardas, pavardė');
-       }, 20);
-      setTimeout(function() {
-          $('input_58').hint('El. paštas');
-       }, 20);
-      JotForm.setPhoneMaskingValidator( 'input_34_full', '(+370) ###-#####' );
-      JotForm.description('input_34', 'Telefonas');
-if (window.JotForm && JotForm.accessible) $('input_67').setAttribute('tabindex',0);
-      setTimeout(function() {
-          $('input_67').hint('Miestas');
-       }, 20);
-      JotForm.alterTexts({"maxSelectionsError":"Didžiausias leistinas pasirinkimų skaičius yra","minSelectionsError":"Minimalus reikalingas pasirinkimų skaičius yra"});
-	/*INIT-END*/
-	});
-
-   JotForm.prepareCalculationsOnTheFly([null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"powerTop","qid":"32","text":"POWER TOP 100","type":"control_head"},null,{"description":"Telefonas","name":"telefonas","qid":"34","text":"","type":"control_phone"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"siusti","qid":"49","text":"Siusti","type":"control_button"},null,null,null,null,null,null,null,null,{"description":"","name":"elPastas","qid":"58","subLabel":"","text":"","type":"control_email"},null,null,null,null,null,null,null,{"description":"","name":"vardasPavarde66","qid":"66","subLabel":"","text":"","type":"control_textbox"},{"description":"","name":"miestas67","qid":"67","subLabel":"","text":"","type":"control_textbox"},null,null,null,null,null,null,null,null,null,{"name":"issirinkSavo","qid":"77","text":"Issirink savo TOP 10:","type":"control_widget"}]);
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"powerTop","qid":"32","text":"POWER TOP 100","type":"control_head"},null,{"description":"Telefonas","name":"telefonas","qid":"34","text":"","type":"control_phone"},null,null,null,null,null,null,null,null,null,null,null,null,null,null,{"name":"siusti","qid":"49","text":"Siusti","type":"control_button"},null,null,null,null,null,null,null,null,{"description":"","name":"elPastas","qid":"58","subLabel":"","text":"","type":"control_email"},null,null,null,null,null,null,null,{"description":"","name":"vardasPavarde66","qid":"66","subLabel":"","text":"","type":"control_textbox"},{"description":"","name":"miestas67","qid":"67","subLabel":"","text":"","type":"control_textbox"},null,null,null,null,null,null,null,null,null,{"name":"issirinkSavo","qid":"77","text":"Issirink savo TOP 10:","type":"control_widget"}]);}, 20); 
-</script>
-<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
-<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5f7ed99c2c2c7240ba580251"/>
-<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.29509" />
-<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.29509" />
-<style type="text/css">
-    @media (max-width: 479px) {
-        .content_wrap, .content_container {
-    width: 95vw !important;
-}
-}
-    
-</style>
-<style type="text/css" id="form-designer-style">
-    /* Injected CSS Code */
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
-.form-all {
-  font-family: "Inter", sans-serif;
-}
-.main .jotform-form {
-  width: 100%;
-  padding: 0 3%;
-}
-.form-all {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1200px;
-}
-.form-line-active {
-  background-color: #ffffe0;
-}
-.form-all {
-  font-size: 18px;
-}
-li.form-line {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.form-line {
-  padding: 12px 10px;
-}
-.form-all .form-textbox,
-.form-all .form-radio-other-input,
-.form-all .form-checkbox-other-input,
-.form-all .form-captcha input,
-.form-all .form-spinner input,
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next,
-.form-all .qq-upload-button,
-.form-all .signature-wrapper,
-.form-all .form-error-message {
-  border-radius: 20px;
-}
-.form-all .form-sub-label {
-  margin-left: 3px;
-}
-.form-all .form-textarea {
-  border-radius: 20px;
-  padding: 10px;
-}
-.form-all .form-submit-button,
-.form-all .form-submit-reset,
-.form-all .form-submit-print {
-  border-radius: 100px;
-}
-.form-all .form-sub-label {
-  margin-left: 3px;
-}
-.supernova .form-all,
-.form-all {
-  border-radius: 6px;
-}
-.form-section:first-child {
-  border-radius: 6px 6px 0 0;
-}
-.form-section:last-child {
-  border-radius: 0 0 6px 6px;
-}
-.form-section {
-  padding: 0px 38px;
-}
-.form-textbox,
-.form-textarea,
-.form-radio-other-input,
-.form-checkbox-other-input,
-.form-captcha input,
-.form-spinner input {
-  background-color: #ffffff;
-}
-.form-textbox {
-  height: 45px;
-}
-li[data-type="control_textbox"] div[data-layout="half"],
-li[data-type="control_dropdown"] div[data-layout="half"],
-li[data-type="control_email"] div[data-layout="half"],
-li[data-type="control_number"] div[data-layout="half"],
-li[data-type="control_phone"] div[data-layout="half"],
-li[data-type="control_datetime"] div[data-layout="half"],
-li[data-type="control_signature"] div[data-layout="half"] {
-  width: 100% !important;
-  max-width: 1000px;
-}
-.form-label {
-  font-family: "Inter", sans-serif;
-}
-.form-line-column {
-  width: calc(50% - 8px);
-}
-[data-type="control_dropdown"] .form-input,
-[data-type="control_birthdate"] .form-input,
-[data-type="control_time"] .form-input,
-[data-type="control_dropdown"] .form-input-wide,
-[data-type="control_birthdate"] .form-input-wide,
-[data-type="control_time"] .form-input-wide {
-  width: 100% !important;
-  max-width: 1000px;
-}
-[data-type="control_dropdown"] .form-dropdown {
-  width: 100% !important;
-  max-width: 1000px;
-}
-.form-checkbox-item label,
-.form-checkbox-item span,
-.form-radio-item label,
-.form-radio-item span {
-  color: #ffffff;
-}
-.form-radio-item,
-.form-checkbox-item {
-  padding-bottom: 0px !important;
-}
-.form-radio-item:last-child,
-.form-checkbox-item:last-child {
-  padding-bottom: 0;
-}
-.form-single-column .form-checkbox-item,
-.form-single-column .form-radio-item {
-  width: 100%;
-}
-.form-checkbox-item .editor-container div,
-.form-radio-item .editor-container div {
-  position: relative;
-}
-.form-checkbox-item .editor-container div:before,
-.form-radio-item .editor-container div:before {
-  display: inline-block;
-  vertical-align: middle;
-  left: 0;
-  width: 20px;
-  height: 20px;
-}
-.submit-button {
-  font-size: 18px;
-  font-weight: normal;
-  height: 40px;
-  font-family: "Inter", sans-serif;
-}
-.submit-button {
-  min-width: 180px;
-}
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-}
-.form-all .form-pagebreak-back,
-.form-all .form-pagebreak-next {
-  min-width: 128px;
-}
-li[data-type="control_image"] div {
-  text-align: left;
-}
-li[data-type="control_image"] img {
-  border: none;
-  border-width: 0px !important;
-  border-style: solid !important;
-  border-color: false !important;
-}
-.supernova {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: repeat;
-}
-.supernova {
-  background-image: none;
-}
-#stage {
-  background-image: none;
-}
-/* | */
-.form-all {
-  background-image: url("https://www.jotform.com/uploads/TV3licenses/form_files/top100mozaika-3.61b0c6b8387272.99814333.png");
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-  background-repeat: repeat;
-}
-.form-header-group {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center top;
-}
-.header-large h1.form-header {
-  font-size: 2em;
-}
-.header-large h2.form-header {
-  font-size: 1.5em;
-}
-.header-large h3.form-header {
-  font-size: 1.17em;
-}
-.header-large h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-large h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-large h3 + .form-subHeader {
-  font-size: .75em;
-}
-.header-default h1.form-header {
-  font-size: 2em;
-}
-.header-default h2.form-header {
-  font-size: 1.5em;
-}
-.header-default h3.form-header {
-  font-size: 1.17em;
-}
-.header-default h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-default h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-default h3 + .form-subHeader {
-  font-size: .75em;
-}
-.header-small h1.form-header {
-  font-size: 2em;
-}
-.header-small h2.form-header {
-  font-size: 1.5em;
-}
-.header-small h3.form-header {
-  font-size: 1.17em;
-}
-.header-small h1 + .form-subHeader {
-  font-size: 1em;
-}
-.header-small h2 + .form-subHeader {
-  font-size: .875em;
-}
-.header-small h3 + .form-subHeader {
-  font-size: .75em;
-}
-.form-header-group {
-  text-align: left;
-}
-.form-header-group {
-  font-family: "Verdana", sans-serif;
-}
-div.form-header-group.header-large {
-  margin: 0px -38px;
-}
-div.form-header-group.header-large {
-  padding: 40px 52px;
-}
-.form-header-group .form-header,
-.form-header-group .form-subHeader {
-  color: #ffffff;
-}
-.form-header-group {
-  background-color: #ff0060;
-}
-.form-line-error {
-  overflow: hidden;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #fff4f4;
-}
-.form-line-error .form-error-message {
-  background-color: #f23a3c;
-  clear: both;
-  float: none;
-}
-.form-line-error .form-error-message .form-error-arrow {
-  border-bottom-color: #f23a3c;
-}
-.form-line-error input:not(#coupon-input),
-.form-line-error textarea,
-.form-line-error .form-validation-error {
-  border: 1px solid #f23a3c;
-  box-shadow: 0 0 3px #f23a3c;
-}
-.supernova {
-  background-color: #ffffff;
-  background-color: #ecedf3;
-}
-.supernova body {
-  background-color: transparent;
-}
-.supernova .form-all,
-.form-all {
-  background-color: #ffffff;
-}
-.form-textbox,
-.form-textarea,
-.form-radio-other-input,
-.form-checkbox-other-input,
-.form-captcha input,
-.form-spinner input {
-  background-color: #ffffff;
-}
-.form-matrix-table tr {
-  border-color: #e6e6e6;
-}
-.form-matrix-table tr:nth-child(2n) {
-  background-color: #f2f2f2;
-}
-.form-all {
-  color: #ffffff;
-}
-.form-label-top,
-.form-label-left,
-.form-label-right,
-.form-html {
-  color: #ffffff;
-}
-.form-line-error {
-  overflow: hidden;
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -ms-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease;
-  -moz-transition-timing-function: ease;
-  -ms-transition-timing-function: ease;
-  -o-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #fff4f4;
-}
-
-/*__INSPECT_SEPERATOR__*/
-.form-label.form-label-auto {
-    display : inline-block;
-    float : left;
-    text-align : left;
-}
-
-.form-required {
-    margin-left : 5px;
-    color : transparent;
-}
-
-
-    /* Injected CSS Code */
-</style>
-
-<form class="jotform-form" action="https://submit.jotformeu.com/submit/213352762281352/" method="post" name="form_213352762281352" id="213352762281352" accept-charset="utf-8" autocomplete="on">
-  <input type="hidden" name="formID" value="213352762281352" />
-  <input type="hidden" id="JWTContainer" value="" />
-  <input type="hidden" id="cardinalOrderNumber" value="" />
-  <div role="main" class="form-all">
-    <style>
-      .form-all:before { background: none;}
-    </style>
-    <ul class="form-section page-section">
-      <li id="cid_32" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-large">
-          <div class="header-text httac htvam">
-            <h1 id="header_32" class="form-header" data-component="header">
-              POWER TOP 100
-            </h1>
-            <div id="subHeader_32" class="form-subHeader">
-              Išrink savo TOP 10 ir dalyvauk ŽAIDIME!
-            </div>
-          </div>
-        </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_widget" id="id_77">
-        <label class="form-label form-label-top" id="label_77" for="input_77">
-          Išsirink savo TOP 10:
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_77" class="form-input-wide jf-required" data-layout="full">
-          <div data-widget-name="Visual Multi Select" style="width:100%;text-align:Center;overflow-x:auto" data-component="widget-field">
-            <iframe data-client-id="5298b265886815755900001e" title="Visual Multi Select" frameBorder="0" scrolling="no" allowtransparency="true" allow="geolocation; microphone; camera; autoplay; encrypted-media; fullscreen" data-type="iframe" class="custom-field-frame" id="customFieldFrame_77" src="" style="max-width:700px;border:none;width:100%;height:355px" data-width="700" data-height="355">
-            </iframe>
-            <div class="widget-inputs-wrapper">
-              <input type="hidden" id="input_77" class="form-hidden form-widget widget-required " name="q77_issirinkSavo" value="" />
-              <input type="hidden" id="widget_settings_77" class="form-hidden form-widget-settings" value="%5B%7B%22name%22%3A%22lists%22%2C%22value%22%3A%22Spiller%20feat.%20Sophie%20Ellis-Bextor%20-%20Groovejet%20(If%20This%20Ain&#x27;t%20Love)%20(Purple%20Disco%20Machine%20%26%20Lorenz%20Rhode%20Remix)%5CnNicolas%20Julian%20x%20Paratone%20-%20Squid%20Game%20-%20The%20Original%5CnUmmet%20Ozcan%20-%20Reborn%5CnJolyon%20Petch%20-%20Dreams%5CnTiesto%20%26%20Killfake%20-%20Money%5CnAdele%20-%20Easy%20On%20Me%20(Dj%20Dark%20%26%20Mentol%20Remix)%5CnThe%20Roop%20-%20Ohmygodable%5CnAdele%20-%20Oh%20My%20God%5CnWilkinson%20-%20Used%20To%20This%20(feat.%20Issey%20Cross)%5CnAcraze%20-%20Do%20It%20To%20It%5CnImagine%20Dragons%20-%20Enemy%20ft.%20JID%5CnAge%20Of%20Love%20-%20The%20Age%20Of%20Love%20(Charlotte%20de%20Witte%20%26%20Enrico%20Sangiuliano%20Remix)%5CnDapa%20Deep%20-%20Higher%5CnReflekt%20feat.%20Delline%20Bass%20-%20Need%20To%20Feel%20Loved%20(Cristoph%20Remix)%5CnPost%20Malone%20and%20The%20Weeknd%20-%20One%20Right%20Now%5CnLucky%20Luke%20feat.%20Delaney%20Jane%20%26%20Angelino%20-%20With%20Or%20Without%20Me%5CnKryder%20-%20Piece%20Of%20Art%5CnGAWP%20-%20Lost%20And%20Found%5CnLasgo%20-%20Something%5CnMinelli%20-%20NOTHING%20HURTS%5CnTujamo%20%26%20PBH%20%26%20Jack%20-%20Nasty%5CnImanbek%20x%20Hollywood%20Undead%20-%20Runaway%5CnChris%20Lorenzo%20feat.%20High%20Jinx%20-%20California%20Dreamin&#x27;%5CnFarruko%20-%20Pepas%20(Tiesto%20Remix)%5CnSigma%2C%20LOWES%20%26%20U137%20-%20Faded%5CnElton%20John%20%26%20Dua%20Lipa%20-%20Cold%20Heart%20(Denis%20Bravo%20Remix)%5CnThe%20Kid%20LAROI%20%26%20Justin%20Bieber%20-%20Stay%5CnBasshunter%20-%20Life%20Speaks%20to%20Me%5CnBlanke%20-%20Breathe%5CnDwin%2C%20LIUFO%20%26%20CANCUN%20-%20Invited%20(feat.%20ECHO)%5CnBoyWithUke%20-%20Toxic%5CnR3HAB%20%26%20Lukas%20Graham%20-%20Most%20People%5CnAmaarae%2C%20Kali%20Uchis%20-%20Sad%20Girlz%20Luv%20Money%20(Remix)%5CnShouse%20-%20Love%20Tonight%20(Robin%20Schulz%20Remix%20Edit)%5CnBURNS%20-%20Talamanca%5CnMari%20Ferrari%20-%20Kilo%5CnRussell%20Small%20%26%20DNO%20P%20-%20Centremental%20feat.%20Sian%20Evans%20(Deekline%20Radio%20Edit)%5CnRiton%20x%20RAYE%20-%20I%20Dont%20Want%20You%5CnUnklfnkl%20-%20Platform%20Sneakers%22%7D%2C%7B%22name%22%3A%22theme%22%2C%22value%22%3A%22Black%22%7D%2C%7B%22name%22%3A%22selectedItems%22%2C%22value%22%3A%22Mano%20TOP%2010%22%7D%2C%7B%22name%22%3A%22selectableItems%22%2C%22value%22%3A%22PWR%20TOP%20100%22%7D%2C%7B%22name%22%3A%22keepOrder%22%2C%22value%22%3A%22false%22%7D%2C%7B%22name%22%3A%22customCSS%22%2C%22value%22%3A%22.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20%7B%5Cn%5Cndisplay%3A%20list-item%20!important%3B%5Cn%5Cnvisibility%3A%20hidden%3B%5Cn%5Cn%7D%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%20~%5Cn%5Cn.ms-elem-selectable.ms-selected%3Aafter%20%7B%5Cn%5Cnvisibility%3A%20visible%3B%5Cn%5Cncontent%3A%20%5C%22%5C%22%3B%5Cn%5Cnbackground%3A%20%23fff%3B%5Cn%5Cndisplay%3A%20block%3B%5Cn%5Cnposition%3A%20absolute%3B%5Cn%5Cntop%3A%200%3B%20left%3A%200%3B%20right%3A%200%3B%20bottom%3A%200%3B%5Cn%5Cnopacity%3A%20.7%3B%5Cn%5Cn%7D%5Cn%5Cn%22%7D%5D" data-version="2" />
-            </div>
-            <script type="text/javascript">
-            setTimeout(function()
-{
-  var _cFieldFrame = document.getElementById("customFieldFrame_77");
-  if (_cFieldFrame)
-  {
-    _cFieldFrame.onload = function()
-    {
-      if (typeof widgetFrameLoaded !== 'undefined')
-      {
-        widgetFrameLoaded(77, {
-          "formID": 213352762281352
-        })
+    <iframe
+      id="JotFormIFrame-82782626296368"
+      title="ShootRome Portrait Session Contract"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allowfullscreen="true"
+      allow="geolocation; microphone; camera"
+      src="https://form.jotformeu.com/82782626296368"
+      frameborder="0"
+      style="
+      min-width: 100%;
+      height:539px;
+      border:none;"
+      scrolling="no"
+    >
+    </iframe>
+    <script type="text/javascript">
+      var ifr = document.getElementById("JotFormIFrame-82782626296368");
+      if (ifr) {
+        var src = ifr.src;
+        var iframeParams = [];
+        if (window.location.href && window.location.href.indexOf("?") > -1) {
+          iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+        }
+        if (src && src.indexOf("?") > -1) {
+          iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+          src = src.substr(0, src.indexOf("?"))
+        }
+        iframeParams.push("isIframeEmbed=1");
+        ifr.src = src + "?" + iframeParams.join('&');
       }
-    };
-    _cFieldFrame.src = "//widgets.jotform.io/multiSelect/?qid=77&ref=" + encodeURIComponent(window.location.protocol + "//" + window.location.host) + '' + '' + '&injectCSS=' + encodeURIComponent(window.location.search.indexOf("ndt=1") > -1);
-    _cFieldFrame.addClassName("custom-field-frame-rendered");
-  }
-}, 0);
-            </script>
-          </div>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_66">
-        <label class="form-label form-label-top" id="label_66" for="input_66">
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_66" class="form-input-wide jf-required" data-layout="half">
-          <input type="text" id="input_66" name="q66_vardasPavarde66" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_66 on" style="width:310px" size="310" value="" placeholder="Vardas, pavardė" data-component="textbox" aria-labelledby="label_66" required="" />
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-2 jf-required" data-type="control_email" id="id_58">
-        <label class="form-label form-label-top" id="label_58" for="input_58">
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_58" class="form-input-wide jf-required" data-layout="half">
-          <input type="email" id="input_58" name="q58_elPastas" class="form-textbox validate[required, Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="El. paštas" data-component="email" aria-labelledby="label_58" required="" />
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-3 jf-required" data-type="control_phone" id="id_34">
-        <label class="form-label form-label-top" id="label_34" for="input_34_full">
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_34" class="form-input-wide jf-required" data-layout="half">
-          <span class="form-sub-label-container" style="vertical-align:top">
-            <input type="tel" id="input_34_full" name="q34_telefonas[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_34 tel-local" style="width:310px" data-masked="true" value="" placeholder="(+370) 000-00000" data-component="phone" aria-labelledby="label_34" required="" />
-            <label class="form-sub-label is-empty" for="input_34_full" id="sublabel_34_masked" style="min-height:13px" aria-hidden="false">  </label>
-          </span>
-        </div>
-      </li>
-      <li class="form-line form-line-column form-col-4 jf-required" data-type="control_textbox" id="id_67">
-        <label class="form-label form-label-top" id="label_67" for="input_67">
-          <span class="form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_67" class="form-input-wide jf-required" data-layout="half">
-          <input type="text" id="input_67" name="q67_miestas67" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_67 on" style="width:310px" size="310" value="" placeholder="Miestas" data-component="textbox" aria-labelledby="label_67" required="" />
-        </div>
-      </li>
-      <li class="form-line" data-type="control_button" id="id_49">
-        <div id="cid_49" class="form-input-wide" data-layout="full">
-          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-            <button id="input_49" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
-              Siųsti
-            </button>
-          </div>
-        </div>
-      </li>
-      <li style="display:none">
-        Should be Empty:
-        <input type="text" name="website" value="" />
-      </li>
-    </ul>
-  </div>
-  <script>
-  JotForm.showJotFormPowered = "0";
-  </script>
-  <script>
-  JotForm.poweredByText = "Powered by Jotform";
-  </script>
-  <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="213352762281352" />
-  <script type="text/javascript">
-  var all_spc = document.querySelectorAll("form[id='213352762281352'] .si" + "mple" + "_spc");
-for (var i = 0; i < all_spc.length; i++)
-{
-  all_spc[i].value = "213352762281352-213352762281352";
-}
-  </script>
-</form>
-<script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.forwardToEu=true;</script><script type="text/javascript">JotForm.isAdmin=true;</script><div id="form-toolbar" style="position:fixed; background:lightyellow; border-bottom:1px solid #ccc; top:0px; left:0px; width:100%; font-family:verdana; opacity:0.5; text-align:right;padding:8px 0;"><button id="fill-form" style="font-size:12px; cursor: pointer; margin-left: 12px;float:left; background:#FC7C01; height: initial; color: white; line-height: 16px; text-decoration:none; padding: 6px 12px; border: none;box-shadow: 0px 0px 4px black!important;">Fill Form</button><span id="close-bar" style="font-weight: bold; float: right; display: block; margin-left: 8px; margin-right: 8px; cursor: pointer;">x</span><a id="open-admin" target="_blank" href="https://support.jotform.com/jfadmin/search.php?keyword=213352762281352"style="font-size:12px; margin-left: 12px;float:right; background:#FC7C01; color: white; line-height: 16px; text-decoration:none; padding: 6px 12px; border: none;box-shadow: 0px 0px 4px black;">Admin</a><a id="clone-form" target="_blank" href="https://support.jotform.com/admn/cloneform.php?formID=213352762281352&preserveFormType=1" style="font-size:12px; margin-left: 12px;float:right; background:#FC7C01; color: white; line-height: 16px; text-decoration:none; padding: 6px 12px; border: none;box-shadow: 0px 0px 4px black;">Clone Form</a><a id="open-v4" target="_blank" href="https://www.jotform.com/build/213352762281352"style="font-size:12px; margin-left: 12px;float:right; background:#FC7C01; color: white; line-height: 16px; text-decoration:none; padding: 6px 12px; border: none;box-shadow: 0px 0px 4px black;">Open in Builder</a><div class="embed-dropdown" style="margin-top:0px">
-                                    <label for="embed-dropdown-1" class="btn btn-dropdown">Test Form</label>
-                                    <input class="embed-dropdown-open" type="checkbox" id="embed-dropdown-1" aria-hidden="true" hidden />
-
-                                    <label for="embed-dropdown-1" class="embed-dropdown-overlay"></label>
-                                    <ul class="embed-dropdown-inner">
-                                    <li><a class="embedLink" target="_blank" href="https://www.jotform.com/viewer/?formID=213352762281352&theme=embed">Embed Method</a></li>
-                                      <li><a class="embedLink" target="_blank" href="https://www.jotform.com/viewer/?formID=213352762281352&theme=wordpress2">Wordpress Theme</a></li>
-                                      <li><a class="embedLink" target="_blank" href="https://www.jotform.com/viewer/?formID=213352762281352&theme=wordpress3">Wordpress Theme 2</a></li>
-                                      <li><a class="embedLink" target="_blank" href="https://www.jotform.com/viewer/?formID=213352762281352&theme=wordpress4">Wordpress Theme 3</a></li>
-                                      <li><a class="embedLink" target="_blank" href="https://www.jotform.com/viewer/?formID=213352762281352&theme=wordpress5">Wordpress Theme 4</a></li>
-                                      <li><a id="openAllEmbed">Open All</a></li>
-                                    </ul>
-                                </div></div> <div style='margin-top: 12px;' /><link type='text/css' rel='stylesheet' href='https://cdn.jotfor.ms/css/styles/adminToolbar.css'><script type="text/javascript">function initializeAdminToolBar(){$("fill-form").observe("click", function(e){var s = document.createElement("script");s.src = "/js/form-tester.js?3.3.29509";document.body.appendChild(s);});$("close-bar").observe("click", function(e){$("form-toolbar").remove();});$("openAllEmbed").observe("click", function(e){$$("a.embedLink").each(function(item) {window.open(item.getAttribute("href"), "_blank");});});}if (document.readyState == "complete"){initializeAdminToolBar();} else {document.addEventListener("DOMContentLoaded", initializeAdminToolBar);}</script>
+      window.handleIFrameMessage = function(e) {
+        if (typeof e.data === 'object') { return; }
+        var args = e.data.split(":");
+        if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+        if (!iframe) { return; }
+        switch (args[0]) {
+          case "scrollIntoView":
+            iframe.scrollIntoView();
+            break;
+          case "setHeight":
+            iframe.style.height = args[1] + "px";
+            break;
+          case "collapseErrorPage":
+            if (iframe.clientHeight > window.innerHeight) {
+              iframe.style.height = window.innerHeight + "px";
+            }
+            break;
+          case "reloadPage":
+            window.location.reload();
+            break;
+          case "loadScript":
+            if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+            var src = args[1];
+            if (args.length > 3) {
+                src = args[1] + ':' + args[2];
+            }
+            var script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            document.body.appendChild(script);
+            break;
+          case "exitFullscreen":
+            if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+            else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+            else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+            else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+            else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+            break;
+        }
+        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+        if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+          var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+          iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+        }
+      };
+      window.isPermitted = function(originUrl, whitelisted_domains) {
+        var url = document.createElement('a');
+        url.href = originUrl;
+        var hostname = url.hostname;
+        var result = false;
+        if( typeof hostname !== 'undefined' ) {
+          whitelisted_domains.forEach(function(element) {
+              if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                  result = true;
+              }
+          });
+          return result;
+        }
+      };
+      if (window.addEventListener) {
+        window.addEventListener("message", handleIFrameMessage, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onmessage", handleIFrameMessage);
+      }
+      </script>
