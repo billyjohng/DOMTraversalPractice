@@ -1,1 +1,96 @@
-BLAH
+<script src="https://form.jotform.com/static/feedback2.js" type="text/javascript">
+
+   
+
+   checkCookie();
+
+    //Set cookie
+
+    function setCookie(cname, cvalue) {
+
+     document.cookie = cname+"="+cvalue+"; ";
+
+    }
+
+    //Get cookie
+
+    function getCookie(cname) {
+
+      var name = cname + "=";
+
+      var ca = document.cookie.split(';');
+
+      for(var i = 0; i < ca.length; i++) {
+
+        var c = ca[i];
+
+        while (c.charAt(0) == ' ') {
+
+          c = c.substring(1);
+
+        }
+
+        if (c.indexOf(name) == 0) {
+
+          return c.substring(name.length, c.length);
+
+        }
+
+      }
+
+      return "";
+
+    }
+
+    //Check cookie is existing
+
+    function checkCookie() {
+
+      var user = getCookie("username");
+
+      if (user == "visited") {
+
+       /*What to do is the visitor is just returning (cookie already existing)*/
+
+               
+
+      } else {
+
+        var JFL_213476585692873 = new JotformFeedback({ 
+
+          formId: '213476585692873', 
+
+          base: 'https://form.jotform.com/', 
+
+          windowTitle: 'Free Consultation with Lisa', 
+
+          background: '#FFA500', 
+
+          fontColor: '#FFFFFF', 
+
+          type: 'false', 
+
+          height: 500, 
+
+          width: 700,
+
+          
+
+         });
+
+      setCookie("username", "visited");
+
+        
+        if (window.location.href.includes('billyg.online') {
+        var delay = 30; //30 seconds
+        function openMe(){JFL_213476585692873.showWindow();}
+        setTimeout(openMe,delay*1000);  
+      }
+
+        
+
+      }
+
+    }
+
+</script>
