@@ -81,9 +81,11 @@
       setCookie("username", "visited");
 
         
-        var delay = 30; //30 seconds
-        function openMe(){JFL_213476585692873.showWindow();}
-        setTimeout(openMe,delay*1000);  
+        if (window.location.href === 'billy.online') {
+      var delay = 30; //30 seconds
+      function openMe(){JFL_213476585692873.showWindow();}
+      setTimeout(openMe,delay*1000);  
+}
         
 
       }
